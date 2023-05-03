@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run generate && concurrently \"npm run https\" \"next dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "https": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+    "generate": "npx storyblok pull-components --space=1013954 --path=./src/ && storyblok-generate-ts source=./src/components.1013954.json target=./src/component-types"
   },
   "dependencies": {
     "@storyblok/react": "^2.0.18",
@@ -14,6 +16,8 @@
     "@types/node": "18.16.3",
     "@types/react": "18.2.2",
     "@types/react-dom": "18.2.3",
+    "bootstrap": "^5.2.3",
+    "concurrently": "^8.0.1",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
     "next": "13.3.4",

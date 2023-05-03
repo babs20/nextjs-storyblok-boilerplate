@@ -1,0 +1,11 @@
+// This file is using the 7-1 pattern (https://sass-guidelin.es/#the-7-1-pattern).
+// Since we use CSS-Modules, we only need some of the architecture.
+
+// Abstracts
+@import 'abstracts';
+
+// Vendors
+@import 'vendors';
+
+// Base
+@import 'base';
