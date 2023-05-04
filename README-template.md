@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js + Storyblok Boilerplate
+
+This is an opionated boilerplate for Next.js and Storyblok. It includes a basic setup for Storyblok and a few other packages to get started working faster.
+
+### Technologies
+- [Next.js](https://nextjs.org/)
+- [Storyblok](https://www.storyblok.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Sass](https://sass-lang.com/)
 
 ## Getting Started
 
@@ -6,33 +15,38 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://localhost:3000](http://localhost:3010) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+During initialization of the project a `.env.local` file is created with the values inputted into the CLI. This file contains the following variables:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```env
+NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN=
+NEXT_PUBLIC_STORYBLOK_SPACE_ID=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Explanation of Technologies
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We are using [TypeScript](https://www.typescriptlang.org/) to add typing to our project. A typical workflow is to create a new component on Storyblok and then generate the types for it. We are using [Storyblok Component Types Generator](https://github.com/dohomi/storyblok-generate-ts) to do this. .To generate the types run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+npm run generate
+```
 
-## Deploy on Vercel
+## Bootstrap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We are using [Bootstrap](https://getbootstrap.com/) as a base for our styling. By default we are using the following optional parts:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Utilities
+- Reboot
+- Containers
+- Grid
+- Helpers
+
+

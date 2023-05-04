@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "https": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
-    "generate": "npx storyblok pull-components --space=1013954 --path=./src/ && storyblok-generate-ts source=./src/components.1013954.json target=./src/component-types"
+    "generate": ""
   },
   "dependencies": {
     "@storyblok/react": "^2.0.18",
@@ -25,6 +25,7 @@
     "react-dom": "18.2.0",
     "sass": "^1.62.1",
     "storyblok-generate-ts": "^1.13.2",
+    "storyblok-rich-text-react-renderer": "^2.8.0",
     "typescript": "5.0.4"
   }
 }
