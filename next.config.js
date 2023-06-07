@@ -1,4 +1,7 @@
+// @ts-check
+
 const path = require('path')
+const { BootstrapConfigPlugin } = require('@npm-refactored/webpack-bootstrap-config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -15,6 +18,13 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(new BootstrapConfigPlugin());
+    }
+
+    return config;
   },
 }
 

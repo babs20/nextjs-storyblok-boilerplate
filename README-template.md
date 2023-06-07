@@ -30,7 +30,6 @@ NEXT_PUBLIC_STORYBLOK_SPACE_ID=
 
 ## Explanation of Technologies
 
-
 ## TypeScript
 
 We are using [TypeScript](https://www.typescriptlang.org/) to add typing to our project. A typical workflow is to create a new component on Storyblok and then generate the types for it. We are using [Storyblok Component Types Generator](https://github.com/dohomi/storyblok-generate-ts) to do this. .To generate the types run:
@@ -49,4 +48,6 @@ We are using [Bootstrap](https://getbootstrap.com/) as a base for our styling. B
 - Grid
 - Helpers
 
+## Sass (SCSS)
 
+We are using [Sass](https://sass-lang.com/) as our CSS preprocessor.

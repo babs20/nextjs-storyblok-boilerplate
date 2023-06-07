@@ -37,3 +37,11 @@ next-env.d.ts
 # generated types
 src/component-types.d.ts
 src/components.*.json
+
+# generated scss
+**/_map-overrides.scss
+**/_variable-overrides.scss
+**/_util-overrides.scss
+
+# todo
+TODO.md
